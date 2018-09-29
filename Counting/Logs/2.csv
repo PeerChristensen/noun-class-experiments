@@ -1,4 +1,0 @@
-ID;language;trial;disp_type;target;distr;matching;key;n_targ;age;sex
-2;Xhosa;1;between;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC3/umtshayelo-broom.PNG;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC9/ileri-ladder.PNG;1;[['s', 1.912536859512329]];11;2;male
-2;Xhosa;2;between;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC3/umthi-tree.PNG;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC9/ileri-ladder.PNG;1;[['k', 0.6984000205993652]];11;2;male
-2;Xhosa;3;within;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC3/umthi-tree.PNG;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC3/umpu-gun.PNG;1;[['s', 0.6052181720733643]];9;2;male

@@ -1,4 +1,0 @@
-ID;language;trial;disp_type;target;distr;matching;key;n_targ;age;sex
-1;Xhosa;1;between;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC7/isitulo-chair.PNG;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC3/umnqwazi-hat.PNG;1;[['s', 0.6328420639038086]];8;1;male
-1;Xhosa;2;between;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC3/umthi-tree.PNG;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC3/umtshayelo-broom.PNG;1;[['s', 0.32242894172668457]];10;1;male
-1;Xhosa;3;between;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC9/intente-tent.PNG;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC9/incwadi-book.PNG;0;[['s', 0.324307918548584]];9;1;male

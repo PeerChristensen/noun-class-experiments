@@ -1,4 +1,0 @@
-ID;language;trial;disp_type;target;distr;matching;key;n_targ;age;sex
-s;Xhosa;1;between;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC3/umthi-tree.PNG;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC9/intyatyambo-flower.PNG;1;[['k', 3.0322699546813965]];8;;male
-s;Xhosa;2;between;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC3/umtshayelo-broom.PNG;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC9/intyatyambo-flower.PNG;1;[['s', 0.7294268608093262]];9;;male
-s;Xhosa;3;within;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC7/isikere-scisscors.PNG;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC7/isitshixo-key.PNG;0;[['k', 0.6137599945068359]];9;;male

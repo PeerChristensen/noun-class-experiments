@@ -1,4 +1,0 @@
-ID;language;trial;disp_type;target;distr;matching;key;n_targ;age;sex
-3;Xhosa;1;between;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC7/isitshixo-key.PNG;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC7/isihlangu-shoe.PNG;1;[['k', 1.9931020736694336]];10;3;male
-3;Xhosa;2;between;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC9/inja-dog.PNG;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC9/ileri-ladder.PNG;0;[['s', 0.603935956954956]];8;3;male
-3;Xhosa;3;between;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC9/ileri-ladder.PNG;/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC9/intente-tent.PNG;0;[['k', 0.39006495475769043]];10;3;male
