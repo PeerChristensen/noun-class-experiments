@@ -39,10 +39,11 @@ info      = {'ID':'','age':'','language':['Xhosa', 'English'],'gender':['male', 
 if not gui.DlgFromDict(info).OK:  
     core.quit()
 
+# remember to create a folder for the log files and change the path below
 log_path  = "/Users/peerchristensen/Desktop/Khanyiso/Counting/Logs/" 
 log       = open(log_path+str(info['ID'])+".csv",'wb')   
 writer    = csv.writer(log, delimiter=";")
-variables = "ID","language","trial","disp_type","target","distr","matching","key","n_targ","age","sex"
+variables = "ID","language","trial","disp_type","target","distr","matching","key","RT","n_targ","age","sex"
 
 writer.writerow(variables)
 
@@ -52,13 +53,14 @@ writer.writerow(variables)
 screen_size = [1000,800]
 size        = [100,100] # stim size
 units       = "pix"
+# for full screen view, remove 'size=screen_size' and replace with 'fullscr=True'
 win         = visual.Window(size=screen_size, monitor="testMonitor",color=(1,1,1))
 
 # colour
 black       = (-1,-1,-1)
 
 # text
-intro_text_xh        = "instructions.."
+intro_text_xh        = "instructions.." 
 begin_screen_xh      = visual.TextStim(win, text=intro_text_xh,color=black)
 end_screen_xh        = visual.TextStim(win, text="the end",color=black)
 
@@ -84,8 +86,7 @@ n_sets = n_displays/2
 
 ########### LOAD ITEMS ##################
 
-path  = "/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC3/"
-
+# remeber to change the paths
 image_path_A = "/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC3/"
 image_path_B = "/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC7/"
 image_path_C = "/Users/peerchristensen/Desktop/Khanyiso/Recognition/NC9/"
@@ -99,6 +100,8 @@ images_D     = [image_path_D + image for image in os.listdir(image_path_D)] # co
 random.shuffle(images_A)
 random.shuffle(images_B)
 random.shuffle(images_C)
+#notice that we're not using the D set. uncomment the line below to use the set.
+#random.shuffle(images_D)
 
 ########### CREATE STIMULI ##############
 
@@ -106,8 +109,13 @@ random.shuffle(images_C)
 list_A1 = list(it.permutations(images_A,2))
 list_B1 = list(it.permutations(images_B,2))
 list_C1 = list(it.permutations(images_C,2))
+#same here..
+#list_D1 = list(it.permutations(images_D,2))
 
 # create pairs between noun classes
+# the D set is not included here.
+# for instance, the 'BC_list' will need to be a 'BCD_list' with the set included
+
 # A is target class
 BC_list = images_B+images_C
 BC_list = np.random.choice(BC_list,len(list_A1))
@@ -140,6 +148,9 @@ for i in range(0,len(list_C1)):
     distr = AB_list[i]
     item=[targ,distr]
     list_C2.append(item)
+    
+# D is target class
+# copy the methods above to create a list called 'list_D2'
 
 stims = [list_A1,list_B1,list_C1,list_A2,list_B2,list_C2]
 #[random.shuffle(sublist) for sublist in stims]
@@ -178,7 +189,7 @@ else:
 win.flip()
 event.waitKeys(keyList=['return'])
 win.flip()
-core.wait(1)
+core.wait(1) # 1 sec pause after the intro screen
 
 trial = 1
 for i in displays[0:3]:
@@ -204,14 +215,13 @@ for i in displays[0:3]:
         stimuli.append(distr)
     center_targ.draw()
     win.flip()
-    core.wait(.3)    
+    core.wait(.3)   # displays target item for n secs
     win.flip()
     for s in stimuli:
         s.draw()
     q.draw()
     win.flip()
     RT=core.Clock()
-    core.wait(.3)
     key = event.waitKeys(keyList=['s','k'],timeStamped=RT)
     win.flip()
     if i in within_sets:
@@ -221,7 +231,7 @@ for i in displays[0:3]:
     print(i[0])
     print(i[1])
     print(disp_type)
-    row = info['ID'],info['language'],trial,disp_type,i[0],i[1],i[2],key,i[3],info['age'],info['gender']
+    row = info['ID'],info['language'],trial,disp_type,i[0],i[1],i[2],key[0][0],key[0][1],i[3],info['age'],info['gender']
     writer.writerow(row)
     trial += 1
 
@@ -233,6 +243,7 @@ else:
 win.flip()
 event.waitKeys(keyList=['return'])
 
+log.close()
 win.close()
 core.quit()
 
